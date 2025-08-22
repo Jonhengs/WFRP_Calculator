@@ -166,9 +166,10 @@ int main() {
         if (!continueWithResult) {
             printf("   ");
             fgets(line, sizeof(line), stdin);
+            p = line;
 
             while (isspace((unsigned char)*p)) p++;
-            p = line;
+            
             if (tolower(*p) == 'q') break;
             if (tolower(*p) == 'c') {
                 set_zero(result);
@@ -223,3 +224,4 @@ int main() {
     printf(GOOD_BYE "\n");
     return 0;
 }
+
